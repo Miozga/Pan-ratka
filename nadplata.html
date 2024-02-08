@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="description" content="Website about WebStudio" />
+    <title>Pan-Ratka</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="currentpreconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="styleshet" rel="modern-normalize" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /><link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style1.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <header>
+      <div class="container container-header">
+          <a class="" href="./index.html"> <div class="">
+            <img class="logo" src="./images/logo2.png" alt="Logo"></div></a>
+                    <!----------------------------------------------------HAMBURGER-->
+
+  <button class="nav-button js-open-menu">
+ <div type="checkbox" class="bar">
+  <span class="top"></span>
+  <span class="middle"></span>
+  <span class="bottom"></span>
+ </div>
+                  </button>
+    <!----------------------------------------------------------------->
+
+
+          <!--<nav class="nav nav-desktop"> !-->
+          <ul class="menu">
+            <li><a class="menu-item " href="./index.html">O mnie</a></li>
+            <li><a class="menu-item current-page" href="./kalkulatory.html">Kalkulatory</a></li>
+            <li>   <a class="menu-item" href="./ważne.html">Ważne</a></li>
+            <li><a class="menu-item " href="./partnerzy.html">Partnerzy</a></li>
+
+          </ul>
+
+        </nav>
+
+        <ul class="contact ">
+          <li class="">
+            <a class="contact-item" href="mailto:miozga.sebastian@gmail.com">
+              <svg width="16px" height="12px">
+                <use href="./images/icons.svg#icon-envelope-1"></use>
+              </svg>miozga.sebastian@gmail.com
+              </a
+            >
+          </li>
+          <li class="">
+            <a class="contact-item" href="tel:+48602609588"
+              ><svg width="16px" height="12px" class="phone-1">
+                <use href="./images/icons.svg#icon-smartphone-1"></use>
+              </svg>
+              +48 602 609 588</a
+            >
+          </li>
+        </ul>
+
+      </div>
+
+    </header>
+    <main class="page-background">
+      <section class="section partners">
+
+        <div id="calculator">
+            <div id="extraPayments">
+                <h3>Nadpłaty</h3>
+                <div id="extraPaymentsInputs">
+                    <!-- Tutaj będą dynamicznie dodawane pola do wprowadzania nadpłat -->
+                </div>
+                <button onclick="addExtraPaymentInput()">Dodaj nadpłatę</button>
+            </div>
+          <div class="input-group">
+              <label for="loanAmount">Kwota kredytu:</label>
+              <input type="number" id="loanAmount" placeholder="Wpisz kwotę kredytu">
+              <p id="totalInterestModified"></p>
+          </div>
+          <div class="input-group">
+              <label for="loanTerm">Okres kredytu (w latach):</label>
+              <input type="number" id="loanTerm" placeholder="Wpisz okres kredytu">
+          </div>
+          <div class="input-group">
+              <label for="interestRate">Oprocentowanie (%):</label>
+              <input type="number" id="interestRate" placeholder="Wpisz oprocentowanie">          <p id="totalInterestOriginal"></p>
+<p id="totalInterestModified"></p>
+          </div>
+
+
+
+
+          <button onclick="calculateLoan()">Oblicz</button>
+          <p id="error" style="color: red;"></p>
+          <p>Wynik: <span id="result"></span></p>
+          <p>Całkowity koszt kredytu: <span id="totalCost"></span></p>
+          <div id="amortizationSchedule"></div>
+      </div>
+      <div class="schedule-container">
+        <div id="originalAmortizationSchedule" class="schedule">
+            <h3>Harmonogram pierwotny</h3>
+            <!-- Tabela harmonogramu pierwotnego -->
+        </div>
+        <div id="modifiedAmortizationSchedule" class="schedule">
+            <h3>Harmonogram z nadpłatami</h3>
+            <!-- Tabela harmonogramu ze zmianami -->
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+      </section>
+      <div class="arrow-container " id="arrow-container">
+        <a href="#" class="scroll-to-top three-d-button">↑</a>
+      </div>
+
+
+      </section>
+      <!--------------------------------------------------------modal end-->
+
+    </main>
+
+    <footer class="footer">
+    <ul class=" ">
+      <li class="contact-footer">
+        <a class="footer-email" href="mailto:miozga.sebastian@gmail.com">
+          <svg width="16px" height="12px">
+            <use href="./images/bxs-phone (2).svg"></use>
+          </svg><i class='bx bx-mail-send bx-md'></i><span>miozga.sebastian@gmail.com</span>
+          </a
+        >
+      </li>
+
+    </ul>
+
+      <a href="./polityka.html" class="privacy-link" target="_blank"  crossorigin="anonymous"
+      referrerpolicy="no-referrer">Polityka prywatności</a>
+<ul class="">
+  <li class="contact-footer">
+    <a class="footer-tel" href="tel:+48602609588"
+ ><i class='bx bxs-phone bx-md' ></i>
+ <span>+48 602 609 588</span></a
+    >
+  </li>
+</ul>
+
+
+    </footer>
+
+    <!-----------------------------------------------mobile menu hamnurger--->
+
+  <div class="menu-wrapper js-menu-container">
+    <button class="menu-button js-close-menu modal-close">
+      <div type="checkbox" class="x">
+        <span class="middle"></span>
+        <span class="bottom"></span>
+       </div>
+              </button>
+<ul class="menu-mobile-nav">
+            <li><a class="menu-item" href="./index.html">O mnie</a></li>
+            <li><a class="menu-item" href="./kalkulatory.html">Kalkulatory</a></li>
+            <li>   <a class="menu-item" href="./ważne.html">Ważne</a></li>
+            <li><a class="menu-item" href="./partnerzy.html">Partnerzy</a></li>
+  </ul>
+
+   <ul class="mobile-menu-contact">
+
+    <li>
+                <a class="contact-item" href="tel:+4802609588"><h2>+48 602 609 588</h2></a>
+                </li>
+                <li>
+                  <a class="contact-item" href="mailto:info@devstudio.com">
+
+                </svg><h3>miozga.sebastian@gmail.com</h3></a>
+                </li>
+
+              </ul>
+
+
+
+
+
+  </div>
+     <script src="./js/modal.js"  defer></script>
+ <script src="./js/mobile-menu.js" defer></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/arrow.js"></script>
+    <script src="./js/extrapay.js"></script>
+
+
+  </body>
+</html>
+
