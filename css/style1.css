@@ -1147,6 +1147,7 @@ label > select {
     height: 80px;
   }
   .nav {
+    position: fixed;
     display: flex;
     column-gap: 20px;
     justify-content: center;
